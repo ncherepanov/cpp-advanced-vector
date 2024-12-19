@@ -24,8 +24,6 @@ public:
  
     RawMemory& operator=(RawMemory&& rhs) noexcept {
         if (this != &rhs) {
-            buffer_ = nullptr;
-            capacity_ = 0;
             Swap(rhs);
         }
         return *this;
